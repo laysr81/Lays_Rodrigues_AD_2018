@@ -1,0 +1,201 @@
+---
+title: "Religião e Opinião pública sobre o aborto"
+author: "Lays Alves Rodrigues"
+date: "8 de janeiro de 2019"
+output:
+  pdf_document: default
+  citation_package: natbib
+  word_document: defaults
+  html_document:
+    df_print: paged
+linestrech: 1.5
+header-includes:
+- \usepackage[utf8]{inputenc}
+- \usepackage[portuguese]{babel}
+- \usepackage{indentfirst}
+- \setlength{\parindent}{1.5cm}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+ library(haven)
+Lays_Rodrigues_tf_ad_ufpe_2018 <- read_dta("Lays-Rodrigues-tf-ad-ufpe-2018.dta")
+Lapop17 <- Lays_Rodrigues_tf_ad_ufpe_2018
+```
+
+
+#### Introdução
+
+
+  Qual a relação entre opinião sobre aborto e religião? Educação, gênero e ideologia também são capazes de explicar opinião sobre aborto? 
+
+  No Brasil, desde a promulgação do Código Penal de 1940, o aborto só é permitido em três casos: quando não houver outro meio de salvar a vida da gestante, casos de incesto ou aborto. Quando a prática não envolve nenhuma dessas ressalvas, o aborto é considerado crime, sendo previsto nos artigos 124 a 127 do Código Penal, que pode levar à gestante, que optou pela interrupção, uma pena de 1 a 3 anos. Sengundo dados da Pesquisa Nacional do Aborto, divulgado em 2016, aproximadamente 13% das mulheres, entre 25 e 39, que respoderam o questionário já fizeram um aborto clandestino. O número corresponde a 251 mulheres em idade fértil que, colocaram sua vida em risco porque o Estado não garante infrasestutura, segurança e atendimento médico para que elas possam realizar o procedimento sem maiores riscos. A legalização do aborto é um tema que, ulitmamente, vem ganhando espaço na mídia e discussões políticas, em agosto de 2018 o Supremo Tribunal Federal arquivou um processo, requerido pelo PSOL, que defendia a descriminalização da interrupção da gravidez até décima segunda semana de gestação, enquanto em alguns países da América Latina (Uruguai, Cuba, Porto Rico e Guinan) o procedimento já é descriminalizado sem restrições socioeconômicas. 
+  
+  O tema é controverso e causa mobilizão popular, existe evidência na literatura americana de que a polítca de legalização do aborto se explica pelo paradigma das políticas de moralidade, ou seja, a alta saliência e a simplicidade técnica geram altos níveis de engajamento popular ( Meier e McFarlane, 1993; Mooney e Lee 1995). Logo, como política de moralidade, é responsiva a opinião pública e às forças religiosas (Camobreco e Barnelo, 2008).No brasil, o tema é amplamente estudado nas ciências naturais (Meira e Ferraz, 1989; Menezes e Alquino, 2009; Diniz e Medeiros, 2010) e até nas ciências júridicas onde os pesquisadores buscaram avaliar a opinião dos magistrados e promotores de justiça sobre a legislação, mostrando que 84% dos respondentes apoiam o aborto quando há risco para gestante (Duarte, Osis, Faúndes e Sousa, 2009).Para Rosado-Nunes (2012), pesquisas envolvendo o binômio aborto-religião ainda é pequeno, quando comparado com a quantidade de estudos que não envolvem religião.Já envolvendo opinião pública e às relações entre legalização do aborto e característas políticas e socieconômicas, como a própria religião, há poucos registros de estudo sobre o assunto na ciência nacional,  por isso é necessário que as ciências sociais mobilizem um tema que, além de já ser amplamente estudado internacionalmente, é de interesse para a conquista de direitos individuais e consolidação da democracia.
+   
+  Aqui, será analisada a relação entre a opnião dos brasileiros sobre interrupção da gravidez quando há risco para a gestante e a frequência com que as pessoas vão a missas ou cultos religiosos. A princiapal hipótese do trabalho é de que, quanto mais as pessoas dizem frequentar missas ou cultos, menos elas apoiam a interrupção da gravidez. Inúmeros artigos estudam essa relação(Petersen, 1976; Harris, 1985;Cook 1993; Jelen, 2003; Ellison, 2005; Kreitzer, 2015), porém todos analisando a sociedade americana, onde o aborto é legalizado desde 1973; aqui, as brechas institucionais se restringem as três possibilidades de aborto que a lei permite, citadas no começo do texto. Junto a proibição no Brasil pelo menos 86% dos cidadãos se declaram cristãos, segundo dados divulgado pelo senso do IBGE realizado em 2010.Além de Religião, a literatura também aponta a influência de outras caracteristas, política e socieconômicas, na opnião sobre o aborto como: gênero, educação e ideologia. Então, estudar esses traços da sociedade junto a restrição do direito ao aborto é importante tanto para preencher uma lacuna nas pesquisas, quanto para entender o impacto da religião na opinião pública sobre o aborto.
+  
+   Por tanto, o trabalho será dividido em cinco sessões: quadro teórico, onde serão revisados trabalhos acerca do tema e que fundamentaram essa pesquisa; hipóteses, derivadas da literatura; dados e metodologia, resultados, mostrando os resultados da pesquisa descritiva e da regressão logística; por fim, as considerações finais. 
+
+
+####Quadro Teórico 
+
+ O direito ao aborto é comumente considerado uma "questão de moralidade" quintaessencial na ciência política, assim como a pena de morte (Mooney e Lee, 1999), suício assistido (Glick e Hutchinsob, 2001), e casamento homoafetivo (Haider- Markel e Meier, 1996). As políticas de moralidade são aquelas em que pelo menos um lado do debate procura validar uma série de valores, equando expande outros (Kreitzer, 20015). Essas polítias tendem a ser tecnicamente simples, e todos podem se dizer bem informados, são também conflituosas e altamente salientes ao público, tendo um maior nível de participação cívica. Estudiosos há muito tempo argumentam que políticas públicas, especialmete as de moralidade, são responsivas à opinião pública (Goggin e Wlezien, 1993; Norrander e Wilcox, 2001; Wetstein e Albritton, 1995). Kreitzer (2015) argumenta que o aumento nas políticas conservadoras de um estado podem ser explicadas pelas mudanças na opnião pública direcionadas a uma perpespectiva conversadora. 
+ 
+ O estudo sobre aborto e religião aponta que a opnião indivual sobre o aborto é altamente correlacionada com as orientações religiosas, sendo o aborto uma questão altamente saliente para algumas denominações religiosas (Evans, 2002). White (1968) diz que a influência da religião na opinião e no comportamento é devido, principalmente, ao reforço das normas e dos valores de um grupo especifico através da interação social, e não por crenças teológicas em qualquer sentido simples. Harris (1985) complementa o trabalho de White sugerindo que, as medidas de participação religiosa podem explicar melhor o impacto da religião na opinião sobre o aborto que as preferências religiosas, crenças ou medidas de intensidade. 
+ 
+   Sabe-se que a religião é ligada a opinião sobre aborto pelo menos em dois aspectos. O alto envolvimento religioso é associado com a rejeição ao aborto (Harris, 1985; Petersen, 1976; Ellison 2005),e quando estratificado, alguns grupos religiosos acabam se mostrando mais intolerantes que outros. A evidência indica que, Católicos e protestantes conservadores (fundamentalistas e evangélicos) são mais prováveis a se opor ao aborto que qualquer outro grupo religioso (Sullins, 1999). Ainferência é de que, quanto mais antiga a religião, os valores tradicionais estarão sendo reavaliados à luz da mudança de condições e que os fundamentos religiosos, à cerca das decisões sobre o aborto, estão sendo repensados, causando um conflito de valores. 
+ 
+  Além da religião, a literatura mobiliza outras variáveis políticas e socioeconômicas a fim de explicar a opnião sobre o aborto como: educação, gênero e ideologia. Harris (1985) aponta que a educação e idade são as variáveis que mais se correlacionaram com opinião sobre aborto, o autor utilizou dados de opinião pública de 1974 a 1982; os achados ainda apontaram que o apoio ao aborto estava associado de forma positiva à educação, e negativamente a religião. Porém, Jelen (2003) pontua que, nos seus estudos sobre a sociedade americana, a educação perdeu seu poder de predição de apoio ao aborto a partir dos anos 90. Indo na contramão dos resultados sobre a sociedade americana, Ellison (2005) mobilizou dados sobre os imigrantes latinos nos Estados Unidos e suas posições acerca do assunto. O autor viu que, para os latinos educação ainda era um fator preditor da opinião sobre o aborto, ou seja, o apoio ao aborto aumentava quando os nivéis de educação aumentavam.  
+ 
+  Gênero e Ideologia são outras variavéis comumente testadas nos trabalhos sobre opinião pública. O papel do gênero na opinião pública sobre o aborto é, aparentemente, complexo. Enquanto alguns estudiosos(Luker, 1984; Schroedel 2000) sugerem que a opinião sobre o aborto só é influenciada pela opinião sobre os papeis de gênero a nível de ativismo, e que isso não se repete no público não ativista. Outros sugerem que a relação entre feminismo e posicionamentos pró-escolha é fraca no nível bivariado, e não sobrevive a imposisão de um controle multivariado (Cook et al. 1992). Os achados de Ellison (2005) também refroçam a idéia de que o gênero, *per si*, não tem tanto poder de predição sobre opinião acerca do aborto, assim como a faixa etária do responde e seu estado civil.
+  
+   Quanto a ideologia, ela é geralemente avaliada na esfera Republicano - Democrata, já que os estudos revisados dizem somente sobre a opinião pública nos Estados Unidos. Nesse contexto, a identificação ideológica é tida como identificação partidária, e os Democratas são tidos como um grupo pró-escolha, enquanto os Republicanos um gurpo pró-vida (Tatalovich e Schier, 1993). Alguns estudos (Wilcox, 2001; Jelen,1997) mostraram claramente que a relação entre a opinião sobre aborto e indentificação partidária vem crescendo ao longo dos tempos. Os achados de Kreitzer (2015) apontam que o final dos anos 80, mais de 80% dos Democratas votaram a favor de políticas pró-escolha, equanto 80% dos Republicanos se opuseram as políticas que garantiam direito ao aborto.
+  
+  
+  
+####Hipóteses 
+  Apresentada a revisão dos trabalhos feitos acerca do tema, todas as hipóteses do trabalho derivam do já vêm sendo feito. O direito a um aborto seguro é um importante passo para a gantia dos direitos das mulheres, e por ser uma *policy morality*, o tema é de grande mobilização na opinião pública, logo, entender como as pessoas se posicionam é essencial.Nos estudos apresentados, a religião é o maior preditor da opinião pública sobre interrupção da gravidez, por isso a hipótese principal do trabalho mobiliza as duas variáveis.
+
+*Hipótese 1= A frequência a missas ou cultos tem inflûencia na opinião sobre aborto;
+
+   Junto a relgião, a educação se mostrou, na literatura, um fator explicativo para opnião sobre o aborto, mesmo que alguns autores defendam que a relação entre as variáveis venha perdendo força ao longo dos anos, essa relação ainda não foi testada com dados sobre o brasil.
+
+*Hipótese 2 = No Brasil, Educação é um fator determinante na opinião sobre o aborto.
+
+  Gênero e ideologia são outras varáveis independente testada no modelo. Mesmo que o gênero já tenha sido constestada na literatura, ela ainda não foi testada utilizando dados sobre o Brasil. Aqui, o esperado é que as mulheres apoiem mais que os homens a interrupção da gravidez. Já para ideologia, como os trabalhos tratam como filiação/identificação com os partidos Republicano ou Democarata, aqui será tratado no espectro esquerda-direita. 
+
+*Hipótese 3 = O gênero tem inlfuência no apoio ao aborto. 
+
+*Hiótese 4 = Pessoas de esquerda tendem a ser mais pró-escolha que pessoas de direita.
+
+     
+   
+####Dados e Metodologia
+
+Para tentar responder às hipóteses propostas no trablho, serão utilizados dados provenientes do LAPOP 2017. O LAPOP, ou Latin America Public Opinion Poject, é um questionário aplicado pela Universidade de Vanderbilt a cada dois anos no Brasil.Já que o intuito do trabalho não é analisar a variação da opinião pública sobre aborto, selecionei apenas as resposta do último questionário aplicado em 2017, com 1532 casos e 236 variáveis. Serão selecionadas cinco variáveis, a relaçao entre as variáveis indepente e depente são justicadas pela teoria acerca do assunto. Como a variável dependente é opinião sobre aborto, a pergunta correspondente é "O sr./sra. acredita que se justifica a interrupção da gravidez, ou seja, um aborto, quando a saúde da mãe está em perigo?", a principal variável indepentende corresponde à frequência que o respondente disse ir a cultos religiosos ou missa,representado pela pergunta "Com que frequência o sr./sra vai à missa ou culto religioso?". As variáveis de controle selecionadas são: grau de escolaridade(de nenhum até 6º na faculdade), gênero (masculino ou feminino) e identifição ideológica ( medida numa escala de 0 a 10, onde 0 é extrema esquerda, e 10 extrema direita). 
+
+Antes de executar e demonstrar os resultados do modelo de regressão, serão feitas análises descritivas da distriuição da variável depentende, apoio ao aborto, entre as variavéis independentes: religião, gênero, educação e ideologia política. A estatísca descritiva, demonstrada pelos gráficos de barra, é importante para a viazualização e um processamento prévio dos dados.
+
+Por ser uma variávél dependente binária, podendo ter resposta 0 ou 1 - onde 0 concorda com a interrupção da gravidez, e 1 não concorda mesmo quando a mãe está em risco - o metódo a ser aplicado será o modelo de regressão logit. O modelo é justamente utilizado quando se tem uma variável dependente limitada, presente em modelos de decisão, em que é necessário escolher entre duas ou mais opções referentes à questão de interesse (Pino,2007). Assim, as análises do trabalho serão dividas em três partes, na primeira análise serão demonstrados os dados através estatística descritiva, posteriormente serão demonstrados os resultados da regressão logit bivariada e, por útlimo, a regressão logit multivariada. Na segunda regressão serão adicionadas ao modelo mais três variáveis independentes: gênero, educação e ideologia. 
+ 
+####Resultados
+
+Nessa sessão serão apresentados os resultados das análises descritivas e do modelo logit, que foi divido em duas partes: na primieira será apresentado o resultado descritivos e da regressão logit bivariada, usando apenas a variáveis dependente "w14a", que mede apoio ou não ao aborto, e independete "q5a", medindo a frequência à missas ou cultos religiosos. Na segunda regressão serão adicionados ao modelo as variávei variáveis de controle: identificação ideológica, gênero e educação.Mas, primeiro serão analisados os dados a fim de entender a distribuição de SIM e NÃO, a partir da perspectiva de cada variável inpendente.
+  
+#####*Frequência à missa ou culto*
+
+O Gráfico 1 mostra a distribuição das pessoas que votaram contra e a favor da interrupção da gravidez de acordo com a assiduidade religiosa.
+
+```{r, pacotes}
+library("dplyr")
+library("ggplot2")
+```
+  
+```{r barplot, q5a}
+Brasil17 <- Lapop17 %>%
+  mutate( w14a = ifelse( w14a == "1",0,1))
+counts <- table(Brasil17$w14a, Brasil17$q5a)
+barplot(counts, main="Gráfico 1 - Apoio à interrupção",
+        xlab="Frequência", col=c("darkblue","red"),
+        legend = rownames(counts), beside=TRUE)
+        
+```
+
+ A distruição da variável frequência se dá de 1 a 5, onde 1 representa os indivíduos que disseram ir uma ou mais vezes à missas ou cultos, já o 5 são aqueles que disseram raramente ou nunca. Nota-se que, a unica barra que onde o Não(1) ao aborto ultrapassa o Sim (0) é a primeira, logo, as pessoas que vão uma ou mais vezes à igreja/cultos acreditam que, de forma agregada, o aborto não é justificável, mesmo quando a vida da gestante está em risco. 
+  
+  
+#####*Gênero*
+
+
+ O Gráfico 2 mostra a distruibão de apoio/rejeição ao aborto por gênero. Aqui, a disdribuição se mostoru de forma mais homogênea entre os gêneros, onde 1 são os homens e 2 as mulheres. Tanto homens, quanto mulheres responderam mais Sim(0), que Não (1) à interrupção da gravidez. 
+  
+```{r barplot, q1 }
+counts <- table(Brasil17$w14a, Brasil17$q1)
+barplot(counts, main="Gráfico 2 - Apoio à interrupção",
+        xlab="Gênero", col=c("darkblue","red"),
+        legend = rownames(counts), beside=TRUE)
+```
+
+#####*Educação*
+
+O Gráfico 3 demonstra os votos a favor (1) e contra (2) ao aborto pelo nivél de educação.No eixo X, a variavél educação é medida em anos, 0 representa aqueles que não completaram nenhum ano na esola, enquanto 17 representa os que passaram 17 anos matriculados em instituição de ensino, ou seja, fizeram até o sétimo ano na universidade. Pelo gráfico, é possivél notar que as únicas barras onde o Não ultrapassa o Sim, mesmo que pouco, são àquelas onde as pessoas não completaram nenhum ano na escola e a que os respondentes completaram pelo menos dois anos.
+    
+```{r barplot, ed }
+counts <- table(Brasil17$w14a, Brasil17$ed)
+barplot(counts, main="Gráfico 3 - Apoio à interrupção",
+        xlab="tempo em inst. de ensino", col=c("darkblue","red"),
+        legend = rownames(counts), beside=TRUE)
+```
+    
+
+#####*Ideologia*
+Por fim, Gráfico 4 apresenta os vostos contra e a favor ao aborto por cada grau de identificação ideológica.   A variável ideologia é medida no espectro esquerda-direita, onde 1 representa a extrema-esquerda, e 10 representa aqueles que disseram ser de extrema-direita. E, em nenhuma das barras apresentadas no gráfico o Não (1) ultrapassou o Sim (0).
+  
+
+```{r barplot, l1 }
+counts <- table(Brasil17$w14a, Brasil17$l1)
+barplot(counts, main="Gráfico 4 - Apoio à interrupção",
+        xlab="Ideologia política", col=c("darkblue","red"),
+        legend = rownames(counts), beside=TRUE)
+```
+
+  
+  
+#####Regressão Bivariada
+  
+  Os resultados abaixo correspondem a regressão logística binomial entre as variáveis de apoio ao aborto e religião. A variavél dependente "w14a" é categórica, 0 ou 1, onde 0 representa as pessoas favoráveis ao aborto quando a mãe esta em risco de vida, 1 são aqueles que responderam "não" à interrupção da gravidez. A variável independente "q5a" representa uma gradação da frequência com que os repondetes disseram ir à missas ou cultos religiosos, onde 1 vai mais de uma semana, e 5 nunca/quase nunca. A análise testa a primeira hipótese do trabalho, onde quanto mais o indivíduo diz frequentar missa/culto mais ele tende a votar contra o aborto. 
+  
+```{r summary}
+logit1 <- glm(formula = w14a ~ q5a, family = "binomial"(link= "logit"), data= Brasil17)
+glm(formula = w14a ~ q5a, family = "binomial"(link="logit"), data= Brasil17)
+summary(logit1)
+
+```
+  Os resultados do modelo mostraram que a variável independente tem efeito negativo e estatisticamente significante, com p-valor ao nível de 95%. Ou seja,  para cada mudança de uma unidade na variável independente "q5a", o log odds da variável dependente "w14a" aumenta em, aproximadamente, -0.19. Como o maior valor da variável inpentende representa uma menor frequência, o modelo mostrou que quanto menos o responde frequenta missas ou cultos, mais ele vota a contra da interrupção da gravidez.   
+
+```{r razoes de chance1}
+confint.default(logit1) ##cálculo dos intervalos de confiança do modelo ajustado
+ ###razões de chance 
+exp(cbind(OR = coef(logit1), confint.default(logit1)))
+```
+
+Dado o resultado estasticamente significativo, a regressão logítica exige ainda o cálculo das razões de chance. As razões de chance, ou "odds ratios" representam as variações relativas no odds ratio, ou razão entre o valor inicial e final do odds. Quando menor que 1, as razões de chance indicam que o evento tem menos probabilidade de ocorrer. Aqui, apesar do modelo ter se apresentado estatisticamente significativo, as propabilidade de ocorrer são baixas (OR < 1). Então, religião é um fator determinante na opinião sobre o aborto, porém a probabilidade de uma pessoa ir muito a igreja e votar pelo aborto não são baixas.Logo, é preciso analisá-la junto a outros fatores. 
+
+
+#####Regressão Multivariada
+
+A regressão logítica abaixo inclui no modelo mais três variáveis: gênero (q1), educação (ed) e ideologia (l1). Essas medidas foram inclusas no modelo com a finalidade de testar as hipóteses 2, 3 e 4. 
+
+```{r, logit2}
+logit2 <- glm(formula = w14a ~ q5a + l1 + ed + q1, family = "binomial"(link= "logit"), data= Brasil17)
+glm(formula = w14a ~ q5a + ed + l1 + q1, family = "binomial"(link="logit"), data= Brasil17)
+summary(logit2)
+
+```
+
+Os resultados da segunda regressão logística mostraram que, só Religião e Educação apresentaram efeitos negativos e estatisticamente significantes, com p-valor<0,001 e p-valor<0.01, respectivamente. Assim, descartando as hipóteses de que gênero e ideologia política são fatores que predizem o apoio ou rejeição do aborto, quando a gestante corre risco de vida. Como no modelo bivariado, a variável "religião" mostrou negativa, assim como educação. Portanto, quando maior os nível educacional e menor a frequência a cultos e missas, mais provavél o apoio ao aborto.
+
+
+```{r razoes de chance2}
+
+confint.default(logit2) ##cálculo dos intervalos de confiança do modelo ajustado
+exp(cbind(OR = coef(logit2), confint.default(logit2))) ###razões de chance
+```
+
+Com as razões de chance menores que 1, tanto para religião (OR = 0.83) quanto para educação(0.95), os resultados continuam mostrando que religião e educação, mesmo sendo estatisticamente siginificantes, possuem pouco poder de predição quando se trata de apoio ou rejeição ao aborto.  
+
+
+####Considerações Finais
+
+O presente trabalho buscou analisar a relação entre opinião pública sobre aborto e religião. Para isso foram usados os dados do LAPOP, Latin America Public Opinion Project, questionário aplicado pela Universidade de Vanderbilt. As perguntas selecionadas no trabalho foram "O sr./sra. acredita que se justifica a interrupção da gravidez, ou seja, um aborto, quando a saúde da mãe está em perigo?" e a principal variável independente se deu pelas respotas da pergunta "Com que frequência o sr./sra vai à missa ou culto religioso?". O trabalho ainda contou com variáveis de controle para educação, gênero e ideologia política. 
+
+Os principais achados do trabalho corroboraram os principais achados já existentes na literatura. Aqui, religião é o maior preditor de opinião pública sobre o aborto, seguido da educação. Porém, ideologia e gênero não aprensentaram nenhuma relação com a variável dependente. E, mesmo apresentado relação, o poder de predição do modelo ainda é baixo.
+
+Por isso, para futuras pesquisas que tentem esclarer a relação entre aborto, religião e educação é recomendável que a pergunta selecionada sobre aborto seja formulada de uma maneira diferente. No Lapop, a pergunta se apresenta de uma maneira que, provavelemte, os respondetes levem em consideração o risco de vida da gestante. Sendo assim, seria esclarecedor ao dilema se a pergunta fosse aprensetada de forma mais direta, sem restrições à interrupção como "O sr./sra. é a favor do aborto", pois só assim é possível ter um retrato de como a sociedade realmente pensa sobre a conquista irrestrita de direitos da mulher. 
+
+
+
+\nocite{*}
+\bibliographystyle{acm}
+\bibliography{bibilio}
